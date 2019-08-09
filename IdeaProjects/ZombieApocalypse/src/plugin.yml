@@ -1,0 +1,9 @@
+main: ru.chess.ZombieApocalypse
+name: ZombieApocalypse
+version: 1.0
+author: The_Chess
+description: Adds a world event for a zombie apocalypse
+commands:
+  za:
+    description: displays information about the Zombie Apocalypse plugin
+    usage: /<command>

@@ -1,0 +1,77 @@
+#Enter the name of the world you want to use for the zombie apocalypse
+#Replace "world" with whatever your server's world is
+world: world
+#when you have configured this file with your world's name change false to true
+configured: false
+#numzombies is the amount of zombies you want to spawn per person from a default event.
+numzombies: 40
+#winpercent is the %, expressed in decimal (meaning 50% is 0.5, 25% is 0.25)
+#of zombies that spawn that must be killed to win
+winpercent: 0.5
+#set a hard limit for the number of zombies spawned. if numzombies*players is greater
+#than this number it will only spawn as many zombies as hardlimit. 
+#any number less than one means there is no limit.
+hardlimit: -1
+#chance is for the chance for an apocalypse to happen 
+#the value is a number between 1 and 100 (for 20% use 20)
+chance: 20
+#The next two are for disabling/enabling some chat messages
+#warning of the possibility for a zombie apocalypse (happens at 8:00 PM)
+warningmsg: true
+#message if a zombie apocalypse didn't happen
+safemsg: true
+#logServerMessages is true if you want ZA messages displayed in the server's console, false if not.
+logServerMessages: true
+#
+#CUSTOM LOOT
+#for each possible reward include the name of the item, use '/za getitem' with an item in your hand
+#to get the name of each item, spell the name exactly the same way as it shows
+#copy and paste one of these as a template for each additional item you want and increase the numbers
+#remember to increase 'numitems' to reflect the number of items you ahve
+#itemN: [item]
+#chanceN: [integer]
+#amountN: [integer]
+#messageN: [message]
+#CHANCE WORKS THIS WAY - this is not a percent
+#a random number will be generated between 1 and the total chance between all items
+#if item 1's chance is 5, and item 2's chance is 10 then a number between 1 and 15 will be generated
+#item 1 will have 5 chances of those 15 possible numbers to be chosen, and item 2 will have 10 chances.
+#Simply put, each item will have that number of chances to be picked out of the sum of all chances.
+#number of items:
+delay: 100
+numitems: 7
+
+item1: DIAMOND_SWORD
+chance1: 5
+amount1: 1
+message1: Well done, hero. You are awarded with this sword of champions!
+
+item2: DIAMOND_CHESTPLATE
+chance2: 5
+amount2: 1
+message2: Well done, hero. You are awarded with this chestplate of champions!
+
+item3: DIAMOND
+chance3: 25
+amount3: 2
+message3: Lucky! You are rewarded with two diamonds!
+
+item4: GOLD_SWORD
+chance4: 25
+amount4: 1
+message4: Fancy! A golden sword!
+
+item5: EMERALD
+chance5: 25
+amount5: 1
+message5: Congratulations, an emerald! Happy trading!
+
+item6: DIAMOND
+chance6: 50
+amount6: 1
+message6: Excellent! You are rewarded with a diamond!
+
+item7: IRON_INGOT
+chance7: 150
+amount7: 5
+message7: Good job! You are rewarded with five iron ingots!
