@@ -75,6 +75,7 @@ public class ZAListener implements Listener, Runnable{
         for (Player p: main.pInvolved)
         {
             p.sendMessage(ChatColor.GREEN + "ZA: Congratulations! You have defended yourself from the undead!");
+            p.removePotionEffect(PotionEffectType.BLINDNESS);
             reward = rng.nextInt(totalChances) + 1;
             
             int i = 0;
@@ -119,7 +120,9 @@ public class ZAListener implements Listener, Runnable{
             if (main.zahappening)
             {
                 main.zahappening = false;
+                Bukkit.getWorld(worldname).setPVP(true);
                 for (Player p: Bukkit.getOnlinePlayers()){
+                    p.removePotionEffect(PotionEffectType.BLINDNESS);
                     if (p.getWorld().toString().equals("CraftWorld{name="+worldname+"}")){
                         p.sendMessage(ChatColor.RED + "ZA: You have failed! The zombies have overwhelmed you.");
                     }
