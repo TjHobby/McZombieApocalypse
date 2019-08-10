@@ -119,8 +119,10 @@ public class ZAStarter implements Listener, Runnable{
                     p.sendMessage(ChatColor.GREEN + "ZA: Starting apocalypse with " + zombiesPerPlayer * main.pInvolved.size() + " zombies.");
                 }
                 p.sendMessage(ChatColor.BOLD + "ZA: The horde of the undead have been let loose! Survive!");
+                p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS,99999,0));
             }
-            Bukkit.getServer().getWorld(worldname).setMonsterSpawnLimit(1500);
+            Bukkit.getServer().getWorld(worldname).setMonsterSpawnLimit(2500);
+            Bukkit.getWorld(worldname).setPVP(false);
             new BukkitRunnable()
             {
                 @Override
